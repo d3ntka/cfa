@@ -1,0 +1,28 @@
+$dark: #161615;
+// $light: #F6F6F6;
+$primary: #e9591c;
+$secondary: #bdc14c;
+$grey: #6B6B6B;
+// $border-light: #EFEFEF;
+// $text-grey: #939491;
+$gradient: #e9591c;
+
+
+
+$navbar-dark-color: rgba(255,255,255, 1);
+// $navbar-dark-hover-color: $grey;
+$navbar-dark-disabled-color: rgba(255,255,255, 0.3);
+$navbar-dark-active-color: $dark;
+
+$box-shadow: 0px 0px 25px rgba(#000,.15);
+$box-shadow-darker: 0px 0px 25px rgba(#000,.3);
+$transition: 0.2s ease-in-out;
+$border-radius: 2.7rem;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1436px
+);

@@ -1,0 +1,129 @@
+html {
+    font-size: 62.5%; //1rem = 10px
+    overflow-x: hidden;
+    // background-color: $light;
+    // color: $dark;
+    @include media-breakpoint-down(lg){
+        font-size: 52.5%;
+    }
+    @include media-breakpoint-down(md){
+        font-size: 45%;
+    }
+}
+
+body {
+    font-size: 2rem;
+    overflow: hidden;
+    // background-color: $light;
+    // color: $dark;
+    // line-height: 1.7;
+    letter-spacing: 0.04rem;
+}
+
+h1,h2.big{
+    font-size: 7.2rem;
+    font-weight: 700;
+    line-height: 0.9;
+    // margin-bottom: 2rem;
+    @include media-breakpoint-down(sm){
+        font-size: 6rem;
+    }
+}
+
+h2{
+    font-size: 6.2rem;
+    font-weight: 700;
+    line-height: 0.9;
+
+}
+
+h3{
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 0.9;
+}
+
+a{
+    transition: $transition;
+}
+
+.pb3{
+    padding-bottom: 3rem;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.color-dark{
+    color: $dark;
+}
+// .color-grey{
+//     color: $grey;
+// }
+.color-primary{
+    color: $primary;
+}
+.color-secondary{
+    color: $secondary;
+}
+.color-white{
+    color: #fff;
+}
+.color-black{
+    color: #000;
+}
+.bg-primary{
+    background-color: $primary;
+}
+
+.subtitle{
+    font-size: 3rem;
+    letter-spacing: 0.01rem;
+    // color: $grey;
+}
+
+.btn{
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.01rem;
+    line-height: 1;
+    border-radius: $border-radius;
+    padding: 1rem 3rem 1.3rem;
+    &-primary{
+        color: #fff;
+        background-color: $primary;
+        &:hover{
+            color: #fff;
+        }
+    }
+    &-white{
+        color: $dark;
+        background-color: $primary;
+        &:hover{
+            color: #fff;
+        }
+    }
+    &-gradient{
+        color: #fff;
+        background-color: $gradient;
+        &:hover{
+            color: #fff;
+        }
+    }
+}
+.btn-outline-secondary{
+    border-width: 2px;
+    color: $secondary;
+    border-color: $secondary;
+    &:hover{
+        color: #fff;
+        background-color: rgba($secondary,0.85);
+    }
+    &:focus,&:active{
+        outline: none;
+        box-shadow: none;
+        background-color: $secondary;
+        color: #fff;
+    }
+}
