@@ -1,11 +1,57 @@
 .navbar-brand {
+    display: flex;
+    align-items: center;
 	img {
 		height: 40px;
 	}
 }
 
+
+
 #header{
     position: absolute;
     width: 100%;
-    
+    background-color: transparent;
+}
+
+.navbar-container{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-auto-columns: auto;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    // &:last-child{
+    //     justify-self: flex-end;
+    // }
+}
+
+
+#footer{
+    background-color: transparent;
+}
+
+.footer{
+    &-card{
+        border-radius: $border-radius;
+        border: 2px solid $secondary;
+        &__name{
+            
+        }
+        &__position{
+
+        }
+        &__btn{
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+
+.socials{
+    display: grid;
+    grid-template-areas: "a a a";
+    gap: 1rem;
+    grid-auto-columns: auto;
 }

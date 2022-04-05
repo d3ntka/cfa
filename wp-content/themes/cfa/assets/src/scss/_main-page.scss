@@ -1,0 +1,20 @@
+.hero{
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    &__content{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        max-width: 1000px;
+        text-align: center;
+        h1{
+            letter-spacing: 0.5rem;
+            color: $primary;
+        }
+        // a{
+        //     display: block;
+        // }
+    }
+}

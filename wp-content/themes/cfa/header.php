@@ -22,8 +22,8 @@
 
 <div id="app">
 	<header>
-		<nav id="header" class="navbar navbar-expand-md <?php echo esc_attr( $navbar_scheme ); if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
-			<div class="container">
+		<nav id="header" class="navbar navbar-expand-md <?php if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
+			<div class="navbar-container">
 				<a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 					<?php
 						$header_logo = get_theme_mod( 'header_logo' ); // Get custom meta-value.
@@ -49,24 +49,23 @@
 							array(
 								'theme_location' => 'main-menu',
 								'container'      => '',
-								'menu_class'     => 'navbar-nav me-auto',
+								'menu_class'     => 'navbar-nav mx-auto',
 								'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
 								'walker'         => new WP_Bootstrap_Navwalker(),
 							)
 						);
-
-						if ( '1' === $search_enabled ) :
-					?>
-							<form class="search-form my-2 my-lg-0" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-								<div class="input-group">
-									<input type="text" name="s" class="form-control" placeholder="<?php esc_attr_e( 'Search', 'cfa' ); ?>" title="<?php esc_attr_e( 'Search', 'cfa' ); ?>" />
-									<button type="submit" name="submit" class="btn btn-outline-secondary"><?php esc_html_e( 'Search', 'cfa' ); ?></button>
-								</div>
-							</form>
-					<?php
-						endif;
 					?>
 				</div><!-- /.navbar-collapse -->
+				<div id="navbar" class="collapse navbar-collapse ms-auto">
+						<div class="socials">
+							<div class="logo-twitter">tw</div>
+							<div class="logo-twitter">fb</div>
+							<div class="logo-twitter">tw</div>
+						</div>
+						<a class="btn btn-white" href="#contact">
+							<?php _e("Kontakt","cfa-t") ;?>
+						</a>
+				</div>
 			</div><!-- /.container -->
 		</nav><!-- /#header -->
 	</header>

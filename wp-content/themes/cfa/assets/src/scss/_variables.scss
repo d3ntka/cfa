@@ -5,9 +5,11 @@ $secondary: #bdc14c;
 $grey: #6B6B6B;
 // $border-light: #EFEFEF;
 // $text-grey: #939491;
-$gradient: #e9591c;
+$gradient: linear-gradient(90deg, rgba(221,24,35,1) 0%, rgba(232,80,29,1) 100%);;
 
-
+:root{
+    --title-spacing:0.04rem;
+}
 
 $navbar-dark-color: rgba(255,255,255, 1);
 // $navbar-dark-hover-color: $grey;

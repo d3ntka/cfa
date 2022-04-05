@@ -16,6 +16,8 @@ $twitch_url = get_field( 'twitch_url' );
 $twitch_count = get_field( 'twitch_count' );
 $facebook_url = get_field( 'facebook_url' );
 $facebook_count = get_field( 'facebook_count' );
+$instagram_url = get_field( 'instagram_url' );
+$instagram_count = get_field( 'instagram_count' );
 
 
 ?>

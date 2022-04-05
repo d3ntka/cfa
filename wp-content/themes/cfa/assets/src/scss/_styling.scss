@@ -1,8 +1,8 @@
 html {
     font-size: 62.5%; //1rem = 10px
     overflow-x: hidden;
-    // background-color: $light;
-    // color: $dark;
+    background-color: $dark;
+    color: #fff;
     @include media-breakpoint-down(lg){
         font-size: 52.5%;
     }
@@ -14,8 +14,8 @@ html {
 body {
     font-size: 2rem;
     overflow: hidden;
-    // background-color: $light;
-    // color: $dark;
+    background-color: $dark;
+    color: #fff;
     // line-height: 1.7;
     letter-spacing: 0.04rem;
 }
@@ -23,7 +23,7 @@ body {
 h1,h2.big{
     font-size: 7.2rem;
     font-weight: 700;
-    line-height: 0.9;
+    // line-height: 1;
     // margin-bottom: 2rem;
     @include media-breakpoint-down(sm){
         font-size: 6rem;
@@ -77,6 +77,13 @@ a{
     background-color: $primary;
 }
 
+.title{
+    text-align: center;
+    text-transform: uppercase;
+    animation: 13s ease spacing infinite;
+}
+
+
 .subtitle{
     font-size: 3rem;
     letter-spacing: 0.01rem;
@@ -90,6 +97,7 @@ a{
     line-height: 1;
     border-radius: $border-radius;
     padding: 1rem 3rem 1.3rem;
+    text-transform: uppercase;
     &-primary{
         color: #fff;
         background-color: $primary;
@@ -97,16 +105,23 @@ a{
             color: #fff;
         }
     }
+    &-secondary{
+        color: #fff;
+        background-color: $secondary;
+        &:hover{
+            color: #fff;
+        }
+    }
     &-white{
         color: $dark;
-        background-color: $primary;
+        background-color: #fff;
         &:hover{
             color: #fff;
         }
     }
     &-gradient{
         color: #fff;
-        background-color: $gradient;
+        background: $gradient;
         &:hover{
             color: #fff;
         }
@@ -126,4 +141,13 @@ a{
         background-color: $secondary;
         color: #fff;
     }
+}
+
+@keyframes spacing {
+    0%,100%{
+        letter-spacing: var(--title-spacing);
+    } 50% {
+        letter-spacing: 1.0rem;
+    }
+
 }
