@@ -1,0 +1,80 @@
+.influ-full{
+    &__grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+    &__cont{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 600px;
+        justify-items: center;
+        img{
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            border-radius: $border-radius;
+        }
+    }
+
+.social-btn{
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    &-icon{
+        width: 2rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .count{
+        &__wrap{
+            border-radius: $border-radius;
+            background-color: #fff;
+            // color: $dark;
+            text-transform: uppercase;
+            padding: 1rem;
+            flex-grow: 1;
+        }
+        &__viewers{
+            color: $dark;
+        }
+    }
+    .twitter{
+        .bg{
+            background-color: $twitter;
+        }
+        .count{
+            color: $twitter;
+        }
+    }
+    .twitch{
+        .bg{
+            background-color: $twitch;
+        }
+        .count{
+            color: $twitch;
+        }
+    }
+    .facebook{
+        .bg{
+            background-color: $facebook;
+        }
+        .count{
+            color: $facebook;
+        }
+    }
+    .instagram{
+        .bg{
+            background-color: $instagram;
+        }
+        .count{
+            color: $instagram;
+        }
+    }
+}
+
+
+
+
+}

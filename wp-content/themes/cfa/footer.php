@@ -30,16 +30,18 @@
 					<div class="col-lg-5">
 						<div class="footer-card">
 							<img src="" alt="">
-							<div class="footer-card__name">Kacper Czapiewski</div>
-							<div class="footer-card__position">Head of Agency</div>
-							<a class="btn btn-secondary footer-card__btn" href="mailto:kacper@cfa.gg">kacper@cfa.gg</a>
+							<div class="">
+								<div class="footer-card__name">Kacper Czapiewski</div>
+								<div class="footer-card__position">Head of Agency</div>
+								<a class="btn btn-secondary footer-card__btn" href="mailto:kacper@cfa.gg">kacper@cfa.gg</a>
+							</div>
 						</div>
 					</div>
 				</div>
 
 
-				<div class="row">
-					<div class="col-md-6">
+				<div class="row justify-content-center">
+					<div class="col-auto">
 						<p><?php printf( esc_html__( 'Copyright by CFA', 'cfa-t' ), date_i18n( 'Y' ) ); ?></p>
 					</div>
 

@@ -5,7 +5,7 @@
 $nick = get_the_title();
 $name = get_field( 'name' ); //Imię i nazwisko
 $desc = get_field( 'description' ); //Opis
-$img = the_post_thumbnail_url();
+$img = get_the_post_thumbnail_url();
 
 
 // ---------------Socials---------------
