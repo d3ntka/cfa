@@ -2,8 +2,8 @@ const gulp = require( 'gulp' ),
 	fancylog = require( 'fancy-log' ),
 	browserSync = require( 'browser-sync' ),
 	server = browserSync.create(),
-	dev_url = 'cfa.test';
-
+	dev_url = 'cfa.test',
+	webp = require('gulp-webp');
 
 /**
  * Define all source paths
@@ -17,6 +17,10 @@ var paths = {
 	scripts: {
 		src: './assets/src/js/*.js',
 		dest: './assets/build/js'
+	},
+	images: {
+		src: './assets/src/img/*.png',
+		dest: './assets/build/img'
 	}
 };
 
@@ -104,4 +108,11 @@ gulp.task( 'watch',
 		gulp.watch( paths.scripts.src, build_js );
 		gulp.watch( [ paths.styles.src, './assets/src/scss/*.scss' ], build_css );
 	}
+);
+
+
+gulp.task('webp', () =>
+    gulp.src(paths.images.src)
+        .pipe(webp({quality: 85}))
+        .pipe(gulp.dest(paths.images.dest))
 );

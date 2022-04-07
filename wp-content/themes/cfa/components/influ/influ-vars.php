@@ -18,6 +18,8 @@ $facebook_url = get_field( 'facebook_url' );
 $facebook_count = get_field( 'facebook_count' );
 $instagram_url = get_field( 'instagram_url' );
 $instagram_count = get_field( 'instagram_count' );
-
-
+$tiktok_url = get_field( 'tiktok_url' );
+$tiktok_count = get_field( 'tiktok_count' );
+$youtube_url = get_field( 'youtube_url' );
+$youtube_count = get_field( 'youtube_count' );
 ?>

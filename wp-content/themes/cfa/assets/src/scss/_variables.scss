@@ -2,7 +2,7 @@ $dark: #161615;
 // $light: #F6F6F6;
 $primary: #e9591c;
 $secondary: #bdc14c;
-$grey: #6B6B6B;
+$grey: #707070;
 // $border-light: #EFEFEF;
 // $text-grey: #939491;
 $gradient: linear-gradient(90deg, rgba(221,24,35,1) 0%, rgba(232,80,29,1) 100%);;
@@ -10,8 +10,9 @@ $gradient: linear-gradient(90deg, rgba(221,24,35,1) 0%, rgba(232,80,29,1) 100%);
 $twitter: #1d9bf0;
 $facebook: #4267b2;
 $twitch: #9347ff;
-$instagram: #d36807;
-
+$instagram: #FCAF45;
+$tiktok: #ee1d52;
+$youtube: #ff0000;
 
 :root{
     --title-spacing:0.04rem;
@@ -25,12 +26,14 @@ $navbar-dark-active-color: $dark;
 $box-shadow: 0px 0px 25px rgba(#000,.15);
 $box-shadow-darker: 0px 0px 25px rgba(#000,.3);
 $transition: 0.2s ease-in-out;
-$border-radius: 2.7rem;
+$border-radius: 1.5rem;
+$border-radius-b: 3rem;
 
 $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
   xl: 1140px,
-  xxl: 1436px
+  xxl: 1400px,
+  wide: 1680px
 );

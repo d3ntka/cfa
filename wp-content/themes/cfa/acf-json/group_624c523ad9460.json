@@ -41,46 +41,6 @@
             "new_lines": ""
         },
         {
-            "key": "field_624c5294eb6c4",
-            "label": "Twitter URL",
-            "name": "twitter_url",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_624c52bceb6c7",
-            "label": "Twitter Count",
-            "name": "twitter_count",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "min": "",
-            "max": "",
-            "step": ""
-        },
-        {
             "key": "field_624c52abeb6c5",
             "label": "Twitch URL",
             "name": "twitch_url",
@@ -121,6 +81,46 @@
             "step": ""
         },
         {
+            "key": "field_624c5294eb6c4",
+            "label": "Twitter URL",
+            "name": "twitter_url",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_624c52bceb6c7",
+            "label": "Twitter Count",
+            "name": "twitter_count",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
             "key": "field_624c52b2eb6c6",
             "label": "Facebook URL",
             "name": "facebook_url",
@@ -143,7 +143,7 @@
             "key": "field_624c52f229956",
             "label": "Facebook Count",
             "name": "facebook_count",
-            "type": "text",
+            "type": "number",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -156,7 +156,9 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": ""
+            "min": "",
+            "max": "",
+            "step": ""
         },
         {
             "key": "field_624c6ded6f931",
@@ -181,6 +183,27 @@
             "key": "field_624c6df66f932",
             "label": "Instagram Count",
             "name": "instagram_count",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_624ec1aae179b",
+            "label": "TikTok URL",
+            "name": "tiktok_url",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -195,6 +218,67 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_624ec1b4e179c",
+            "label": "TikTok Count",
+            "name": "tiktok_count",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_624ec76ee3f35",
+            "label": "YouTube URL",
+            "name": "youtube_url",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_624ec778e3f36",
+            "label": "YouTube Count",
+            "name": "youtube_count",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
         }
     ],
     "location": [
@@ -215,5 +299,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1649176557
+    "modified": 1649330122
 }

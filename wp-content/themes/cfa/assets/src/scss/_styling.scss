@@ -17,11 +17,11 @@ body {
     background-color: $dark;
     color: #fff;
     // line-height: 1.7;
-    letter-spacing: 0.04rem;
+    letter-spacing: 0.05rem;
 }
 
 h1,h2.big{
-    font-size: 7.2rem;
+    font-size: 6rem;
     font-weight: 700;
     // line-height: 1;
     // margin-bottom: 2rem;
@@ -151,3 +151,18 @@ a{
     }
 
 }
+
+
+// @mixin make-container($padding-x: $container-padding-x) {
+//     width: 100%;
+//     padding-right: $padding-x;
+//     padding-left: $padding-x;
+//     margin-right: auto;
+//     margin-left: auto;
+//   }
+  
+  // Usage
+  .container-wide {
+    @include make-container(1rem);
+    max-width: 1680px;
+  }
