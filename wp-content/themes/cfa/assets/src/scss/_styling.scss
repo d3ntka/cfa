@@ -97,8 +97,8 @@ a {
   font-weight: 600;
   letter-spacing: 0.01rem;
   line-height: 1;
-  border-radius: $border-radius;
-  padding: 1rem 3rem 1.3rem;
+  border-radius: $border-radius-b;
+  padding: 1rem 3rem 1rem;
   text-transform: uppercase;
   &-primary {
     color: #fff;
@@ -119,6 +119,7 @@ a {
     background-color: #fff;
     &:hover {
       color: #fff;
+      background-color: $primary;
     }
   }
   &-gradient {

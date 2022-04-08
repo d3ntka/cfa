@@ -4,11 +4,13 @@
     align-items: center;
     justify-content: center;
     &__content{
+        position: relative;
         display: grid;
         align-items: center;
         justify-content: center;
         max-width: 1000px;
         text-align: center;
+        z-index: 100;
         h1{
             letter-spacing: 0.5rem;
             color: $primary;

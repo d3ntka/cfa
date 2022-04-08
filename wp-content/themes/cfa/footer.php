@@ -42,7 +42,7 @@
 
 				<div class="row justify-content-center">
 					<div class="col-auto">
-						<p><?php printf( esc_html__( 'Copyright by CFA', 'cfa-t' ), date_i18n( 'Y' ) ); ?></p>
+						<p class="copyright"><?php printf( esc_html__( 'Copyright by CFA', 'cfa-t' ) ); ?> 2022</p>
 					</div>
 
 

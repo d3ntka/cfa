@@ -24,3 +24,11 @@ import * as bootstrap from 'bootstrap';
 		} );
 	} );
 } )();
+
+// dodaje selektor do otwartego navbara
+(function ($) {
+	$(document).on("click", ".navbar-toggler", function () {
+	  $(this).parents(".navbar").toggleClass("nav-opened");
+	//   $(".navbar").toggleClass("nav-opened");
+	});
+})(jQuery);

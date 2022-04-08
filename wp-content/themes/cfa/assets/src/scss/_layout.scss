@@ -6,6 +6,10 @@
     min-height: 48rem;
     position: relative;
     margin-bottom: 5rem;
+    a,.title{
+        position: relative;
+        z-index: 50;
+    }
     &::after{
         content: "";
         position: absolute;
@@ -23,6 +27,41 @@
     background-position-y: 85%;
     animation: slide 600s linear infinite;
 }
+
+.aux-header{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    &::before,&::after{
+        content: "";
+        background-image: url("../img/icons/aux-icons.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+    }
+    &::before{
+        width: 10.2rem;
+        height: 60rem;
+    }
+    &::after{
+        width: 20.4rem;
+        height: 119rem;
+    }
+    &__page{
+        &::before{
+            left: 5rem;
+            bottom: 20rem;
+        }
+        &::after{
+            right: 5rem;
+            bottom: 20rem;
+        }
+    }
+}
+
+
+
 
 @keyframes slide{
     0%{

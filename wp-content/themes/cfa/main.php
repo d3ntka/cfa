@@ -12,7 +12,8 @@ get_header();
 
 <!-- SEKCJA HERO -->
 <section>
-    <div class="hero">
+    <div class="hero page-header-bg">
+        <div class="aux-header aux-header__page"></div>
         <div class="hero__content">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="950.977" height="42.332" viewBox="0 0 950.977 42.332">
                 <defs>
