@@ -12,6 +12,7 @@
     position: absolute;
     width: 100%;
     background-color: transparent;
+    z-index: 1500;
 }
 
 .navbar-container{
@@ -49,9 +50,11 @@
 }
 
 
-.socials{
+.nav-socials{
     display: grid;
     grid-template-areas: "a a a";
     gap: 1rem;
     grid-auto-columns: auto;
 }
+
+

@@ -1,168 +1,162 @@
 html {
-    font-size: 62.5%; //1rem = 10px
-    overflow-x: hidden;
-    background-color: $dark;
-    color: #fff;
-    @include media-breakpoint-down(lg){
-        font-size: 52.5%;
-    }
-    @include media-breakpoint-down(md){
-        font-size: 45%;
-    }
+  font-size: 62.5%; //1rem = 10px
+  overflow-x: hidden;
+  background-color: $dark;
+  color: #fff;
+  @include media-breakpoint-down(lg) {
+    font-size: 52.5%;
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 45%;
+  }
 }
 
 body {
-    font-size: 2rem;
-    overflow: hidden;
-    background-color: $dark;
-    color: #fff;
-    // line-height: 1.7;
-    letter-spacing: 0.05rem;
+  font-size: 2rem;
+  overflow: hidden;
+  background-color: $dark;
+  color: #fff;
+  // line-height: 1.7;
+  letter-spacing: 0.05rem;
 }
 
-h1,h2.big{
+h1,
+h2.big {
+  font-size: 6rem;
+  font-weight: 400;
+  // line-height: 1;
+  // margin-bottom: 2rem;
+  @include media-breakpoint-down(sm) {
     font-size: 6rem;
-    font-weight: 700;
-    // line-height: 1;
-    // margin-bottom: 2rem;
-    @include media-breakpoint-down(sm){
-        font-size: 6rem;
-    }
+  }
 }
 
-h2{
-    font-size: 6.2rem;
-    font-weight: 700;
-    line-height: 0.9;
-
+h2 {
+  font-size: 6.2rem;
+  font-weight: 700;
+  line-height: 0.9;
 }
 
-h3{
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 0.9;
+h3 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 0.9;
 }
 
-a{
-    transition: $transition;
+a {
+  transition: $transition;
 }
 
-.pb3{
-    padding-bottom: 3rem;
+.pb3 {
+  padding-bottom: 3rem;
 }
 
-.text-center{
-    text-align: center;
+.text-center {
+  text-align: center;
 }
 
-.color-dark{
-    color: $dark;
+.color-dark {
+  color: $dark;
 }
-// .color-grey{
-//     color: $grey;
-// }
-.color-primary{
-    color: $primary;
+.color-grey {
+  color: $grey;
 }
-.color-secondary{
-    color: $secondary;
+.color-primary {
+  color: $primary;
 }
-.color-white{
+.color-secondary {
+  color: $secondary;
+}
+.color-white {
+  color: #fff;
+}
+.color-black {
+  color: #000;
+}
+.bg-primary {
+  background-color: $primary;
+}
+
+.title {
+  font-family: "ethnocentric", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: $dark;
+  -webkit-text-stroke: 1px #fff;
+  animation: 13s ease spacing infinite;
+}
+
+.subtitle {
+  font-size: 3rem;
+  letter-spacing: 0.01rem;
+  // color: $grey;
+}
+
+.btn {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.01rem;
+  line-height: 1;
+  border-radius: $border-radius;
+  padding: 1rem 3rem 1.3rem;
+  text-transform: uppercase;
+  &-primary {
     color: #fff;
-}
-.color-black{
-    color: #000;
-}
-.bg-primary{
     background-color: $primary;
+    &:hover {
+      color: #fff;
+    }
+  }
+  &-secondary {
+    color: #fff;
+    background-color: $secondary;
+    &:hover {
+      color: #fff;
+    }
+  }
+  &-white {
+    color: $dark;
+    background-color: #fff;
+    &:hover {
+      color: #fff;
+    }
+  }
+  &-gradient {
+    color: #fff;
+    background: $gradient;
+    &:hover {
+      color: #fff;
+    }
+  }
 }
-
-.title{
-    text-align: center;
-    text-transform: uppercase;
-    animation: 13s ease spacing infinite;
-}
-
-
-.subtitle{
-    font-size: 3rem;
-    letter-spacing: 0.01rem;
-    // color: $grey;
-}
-
-.btn{
-    font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: 0.01rem;
-    line-height: 1;
-    border-radius: $border-radius;
-    padding: 1rem 3rem 1.3rem;
-    text-transform: uppercase;
-    &-primary{
-        color: #fff;
-        background-color: $primary;
-        &:hover{
-            color: #fff;
-        }
-    }
-    &-secondary{
-        color: #fff;
-        background-color: $secondary;
-        &:hover{
-            color: #fff;
-        }
-    }
-    &-white{
-        color: $dark;
-        background-color: #fff;
-        &:hover{
-            color: #fff;
-        }
-    }
-    &-gradient{
-        color: #fff;
-        background: $gradient;
-        &:hover{
-            color: #fff;
-        }
-    }
-}
-.btn-outline-secondary{
-    border-width: 2px;
-    color: $secondary;
-    border-color: $secondary;
-    &:hover{
-        color: #fff;
-        background-color: rgba($secondary,0.85);
-    }
-    &:focus,&:active{
-        outline: none;
-        box-shadow: none;
-        background-color: $secondary;
-        color: #fff;
-    }
+.btn-outline-secondary {
+  border-width: 2px;
+  color: $secondary;
+  border-color: $secondary;
+  &:hover {
+    color: #fff;
+    background-color: rgba($secondary, 0.85);
+  }
+  &:focus,
+  &:active {
+    outline: none;
+    box-shadow: none;
+    background-color: $secondary;
+    color: #fff;
+  }
 }
 
 @keyframes spacing {
-    0%,100%{
-        letter-spacing: var(--title-spacing);
-    } 50% {
-        letter-spacing: 1.0rem;
-    }
-
+  0%,
+  100% {
+    letter-spacing: var(--title-spacing);
+  }
+  50% {
+    letter-spacing: 1rem;
+  }
 }
 
-
-// @mixin make-container($padding-x: $container-padding-x) {
-//     width: 100%;
-//     padding-right: $padding-x;
-//     padding-left: $padding-x;
-//     margin-right: auto;
-//     margin-left: auto;
-//   }
-  
-  // Usage
-  .container-wide {
-    @include make-container(1rem);
-    max-width: 1680px;
-  }
+.container-wide {
+  @include make-container(1rem);
+  max-width: 1680px;
+}

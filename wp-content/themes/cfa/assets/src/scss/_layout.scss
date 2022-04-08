@@ -3,8 +3,28 @@
     justify-content: center;
     justify-items: center;
     align-content: center;
-    min-height: 40rem;
-    // a{
-    //     justify-self: center;
-    // }
+    min-height: 48rem;
+    background: url("../img/main_bg.webp");
+    background-position: bottom;
+    background-repeat: repeat-x;
+    position: relative;
+    margin-bottom: 5rem;
+    &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 50%;
+        background: linear-gradient(180deg, rgba(22,22,21,0) 0%, rgba(22,22,21,1) 100%);
+    }
+}
+
+.back-to-main{
+    font-size: 1.3rem;
+    color: $grey;
+    padding: 0.5rem;
+    &:hover{
+        color: $primary;
+    }
 }

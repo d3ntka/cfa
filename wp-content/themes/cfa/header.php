@@ -3,7 +3,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+	<link rel="stylesheet" href="https://use.typekit.net/rmy2tuu.css">
 	<?php wp_head(); ?>
 </head>
 
@@ -58,7 +58,7 @@
 					?>
 				</div><!-- /.navbar-collapse -->
 				<div id="navbar" class="collapse navbar-collapse ms-auto">
-						<div class="socials">
+						<div class="nav-socials">
 							<div class="logo-twitter">tw</div>
 							<div class="logo-twitter">fb</div>
 							<div class="logo-twitter">tw</div>
