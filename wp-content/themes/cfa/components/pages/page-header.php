@@ -1,6 +1,6 @@
 
 
-<div class="page-header">
+<div class="page-header page-header-bg">
     <a href="<?php echo home_url(); ?>" class="back-to-main">
         <?php _e("Wróć do głównej", "cfa"); ?>
     </a>

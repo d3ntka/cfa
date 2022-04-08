@@ -18,6 +18,12 @@
             border-radius: $border-radius-b;
             // object-fit: ;
         }
+        &:nth-child(2n){
+            @media (min-width: 1280px){
+                padding-top: 10rem;
+                margin-bottom: -10rem;
+            }
+        }
     }
     .meta{
         .data{
@@ -46,22 +52,32 @@
 
 .social-btn{
     display: flex;
-    align-items: stretch;
+    // align-items: stretch;
     width: 100%;
     border-radius: $border-radius;
     margin-left: -1rem;
     margin-bottom: 1.2rem;
+    height: 8rem;
     &-icon{
         max-width: 5rem;
         width: 100%;
         height: 100%;
-        display: flex;
+        display: grid;
         align-items: center;
+        justify-items: center;
         transition: $transition;
+        svg{
+            transition: $transition;
+            transition-delay: 0.1s;
+            transition-duration: 0.3s;
+        }
     }
     &:hover{
         .social-btn-icon{
             max-width: 7rem;
+            svg{
+                transform: scale(1.4);
+            }
         }
     }
     .count{
@@ -71,10 +87,14 @@
         &__wrap{
             border-radius: $border-radius;
             background-color: #fff;
+
+            display: grid;
+            align-items: center;
             // color: $dark;
             text-transform: uppercase;
             padding: 1.2rem 1rem 2rem 2.4rem;
             flex-grow: 1;
+            width: 100%;
         }
         &__name{
             color: $dark;
