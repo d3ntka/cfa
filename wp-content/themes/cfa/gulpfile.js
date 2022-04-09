@@ -113,6 +113,6 @@ gulp.task( 'watch',
 
 gulp.task('webp', () =>
     gulp.src(paths.images.src)
-        .pipe(webp({quality: 85}))
+        .pipe(webp({quality: 100}))
         .pipe(gulp.dest(paths.images.dest))
 );

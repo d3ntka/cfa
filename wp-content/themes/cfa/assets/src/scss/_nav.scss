@@ -65,18 +65,61 @@
 }
 
 .footer{
+    padding-top: 20rem;
+    .title{
+        margin-bottom: 14.5rem;
+    }
+    &__txt{
+        h3{
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 3.5rem;
+        }
+        p{
+            font-size: 1.3rem;
+        }
+    }
     &-card{
-        border-radius: $border-radius;
-        border: 2px solid $secondary;
+        border-radius: $border-radius-b;
+        border: 3px solid $secondary;
+        display: grid;
+        max-width: 53rem;
+        grid-template-columns: 25rem auto;
+
+
+        img{
+            max-width: 25rem;
+            width: 100%;
+            height: auto;
+        }
+        &__cont{ //name + btn
+            display: grid;
+            align-content: center;
+        }
+        &__meta{
+            padding-top: 2rem;
+            padding-left: 3rem;
+            padding-bottom: 2.4rem;
+        }
         &__name{
-            
+            font-size: 1.8rem;
+            font-weight: 500;
         }
         &__position{
-
+            font-size: 1.3rem;
         }
         &__btn{
-            display: flex;
+            display: inline-flex;
             align-items: center;
+            font-size: 1.6rem;
+            font-weight: 500;
+            padding: 1.5rem 4rem 1.5rem 3rem;
+            transform: translateX(-2rem);
+            svg{
+                margin-right: 1.3rem;
+                max-width: 2.6rem;
+                min-height: 1.65rem;
+            }
         }
     }
     .copyright{
@@ -85,6 +128,8 @@
         text-transform: uppercase;
         letter-spacing: 0.09rem;
         color: $grey;
+        padding-top: 20rem;
+        padding-bottom: 2rem;
     }
 }
 

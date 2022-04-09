@@ -9,10 +9,13 @@ html {
   @include media-breakpoint-down(md) {
     font-size: 45%;
   }
+  @include media-breakpoint-down(sm) {
+    font-size: 30%;
+  }
 }
 
 body {
-  font-size: 2rem;
+  font-size: 1.3rem;
   overflow: hidden;
   background-color: $dark;
   color: #fff;
@@ -83,7 +86,9 @@ a {
   text-transform: uppercase;
   color: $dark;
   -webkit-text-stroke: 1px #fff;
-  animation: 13s ease spacing infinite;
+  @include media-breakpoint-up(lg){
+    animation: 13s ease spacing infinite;
+  }
 }
 
 .subtitle {
@@ -93,12 +98,12 @@ a {
 }
 
 .btn {
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 0.01rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  // letter-spacing: 0.01rem;
   line-height: 1;
   border-radius: $border-radius-b;
-  padding: 1rem 3rem 1rem;
+  padding: 1.3rem 3rem;
   text-transform: uppercase;
   &-primary {
     color: #fff;
@@ -110,6 +115,13 @@ a {
   &-secondary {
     color: #fff;
     background-color: $secondary;
+    &:hover {
+      color: #fff;
+    }
+  }
+  &-tertiary {
+    color: #fff;
+    background-color: $tertiary;
     &:hover {
       color: #fff;
     }
@@ -158,6 +170,36 @@ a {
 }
 
 .container-wide {
-  @include make-container(1rem);
+  @include make-container(5rem);
   max-width: 1680px;
+}
+
+
+.title-line{
+  position: relative;
+  >*{
+    position: relative;
+  }
+  &::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 17.6rem;
+    width: 450rem;
+    background-image: url("../img/title-line.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-position: -300%;
+  }
+  &--1{
+    &::before{
+      right: -250rem;
+    }
+  }
+
+  &--footer{
+    &::before{
+      right: -200rem;
+    }
+  }
 }

@@ -1,22 +1,160 @@
-.hero{
-    height: 100vh;
+.mainpage {
+  .hero {
+    min-height: 60rem;
+    height: 95vh;
     display: grid;
     align-items: center;
     justify-content: center;
-    &__content{
-        position: relative;
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        max-width: 1000px;
-        text-align: center;
-        z-index: 100;
-        h1{
-            letter-spacing: 0.5rem;
-            color: $primary;
-        }
-        // a{
-        //     display: block;
-        // }
+    &__content {
+      position: relative;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      justify-items: center;
+      max-width: 1000px;
+      text-align: center;
+      z-index: 100;
+      h1 {
+        letter-spacing: 0.5rem;
+        color: $primary;
+        padding: 5rem 3rem;
+      }
+      svg {
+        max-width: 95rem;
+        width: 100%;
+      }
+      p {
+        font-size: 1.3rem;
+        margin-bottom: 3rem;
+        max-width: 65rem;
+      }
+      // a{
+      //     display: block;
+      // }
     }
+  }
+
+  .creators {
+    padding-top: 15rem;
+    .title {
+      margin-bottom: 5rem;
+    }
+    .s-bg {
+      border: 3px solid $tertiary;
+      width: 100%;
+      height: 43rem;
+      padding-bottom: 6rem;
+      border-radius: $border-radius-b;
+      display: grid;
+      align-content: flex-end;
+      // justify-content: center;
+      justify-items: center;
+      margin-top: -11rem;
+      position: relative;
+      //   transform: perspective(-50rem);
+      overflow: hidden;
+      z-index: 2;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url("../img/mainpage-influ-bg.svg");
+        background-position: 50% 70%;
+        z-index: -1;
+        transform-origin: center center;
+        transition: $transition;
+        // transform: perspective(250px) rotateX(30deg);
+      }
+      &:hover {
+        &::before {
+          transform: perspective(450px) rotateX(30deg) scale(1.5);
+        }
+      }
+    }
+    .s-txt {
+      font-size: 3rem;
+      font-weight: 600;
+      padding-bottom: 2rem;
+    }
+    .s-btn {
+    }
+
+    &__row {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 1.6rem;
+      justify-content: center;
+      position: relative;
+      z-index: 50;
+    }
+    .creator {
+      display: block;
+      &:nth-child(1) {
+        transform: translateY(7rem);
+      }
+      &:nth-child(3) {
+        transform: translateY(13rem);
+      }
+      &__img {
+        max-width: 40rem;
+        max-height: 44rem;
+        border-radius: $border-radius-b;
+        overflow: hidden;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          object-position: top;
+        }
+      }
+    }
+    .nick {
+      font-size: 2.2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding-left: 2.5rem;
+      display: inline;
+    }
+    .socials {
+      display: grid;
+      grid-template-columns: repeat(5, auto);
+      justify-content: flex-start;
+      gap: 1rem;
+      padding-left: 2.5rem;
+      transform: translateY(-2rem);
+    }
+    .social-btn {
+      border-radius: 50%;
+      height: 3.8rem;
+      width: 3.8rem;
+      background-color: #fff;
+      display: grid;
+      place-items: center;
+      transition: $transition;
+
+      &-icon {
+        max-width: 1.9rem;
+        height: 2.2rem;
+        svg {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          transition: $transition;
+        }
+        path {
+          fill: $dark;
+          transition: $transition;
+        }
+      }
+      &:hover {
+        background-color: $primary;
+        .social-btn-icon {
+          path {
+            fill: #fff;
+          }
+        }
+      }
+    }
+  }
 }

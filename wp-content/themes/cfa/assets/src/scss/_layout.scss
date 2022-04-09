@@ -25,7 +25,8 @@
     background: url("../img/main_bg.webp");
     background-repeat: repeat-x;
     background-position-y: 85%;
-    animation: slide 600s linear infinite;
+    animation: slidep 60s linear infinite;
+    transform-origin: top;
 }
 
 .aux-header{
@@ -58,12 +59,31 @@
             bottom: 20rem;
         }
     }
+    &__main{
+        &::before{
+            left: 5rem;
+            bottom: 0rem;
+        }
+        &::after{
+            right: 5rem;
+            bottom: 7rem;
+        }
+    }
 }
 
 
 
 
-@keyframes slide{
+@keyframes slide1{
+    0%,100%{
+        background-position-x: 0%;
+    }
+    50%{
+        background-position-x: 100%;
+    }
+
+}
+@keyframes slide2{
     0%{
         background-position-x: 0%;
     }
@@ -74,6 +94,23 @@
         background-position-x: 1000%;
     }
 }
+@keyframes slidep{
+    0%{
+        background-position-x: 0%;
+        transform: perspective(1000px) rotateX(0deg) scale(1);
+    }
+    50%{
+        background-position-x: 100%;
+        transform: perspective(800px) rotateX(30deg) scale(1.0);
+    }
+    100%{
+        background-position-x: 200%;
+        transform: perspective(1000px) rotateX(0deg) scale(1);
+    }
+}
+
+
+
 
 .back-to-main{
     font-size: 1.3rem;
