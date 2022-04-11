@@ -44,28 +44,34 @@
     &::before{
         width: 10.2rem;
         height: 60rem;
+        left: 5rem;
+        @include media-breakpoint-down(md){
+            left:0;
+            transform: translateX(-50%);
+        }
     }
     &::after{
         width: 20.4rem;
         height: 119rem;
+        right: 5rem;
+        @include media-breakpoint-down(md){
+            right:0;
+            // transform: translateX(50%);
+        }
     }
     &__page{
         &::before{
-            left: 5rem;
             bottom: 20rem;
         }
         &::after{
-            right: 5rem;
             bottom: 20rem;
         }
     }
     &__main{
         &::before{
-            left: 5rem;
             bottom: 0rem;
         }
         &::after{
-            right: 5rem;
             bottom: 7rem;
         }
     }
