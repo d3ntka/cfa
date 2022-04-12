@@ -97,12 +97,12 @@ $cases = new WP_Query($args);
                     </div>
                 </div>
                 <!-- <div class="row justify-content-center"> -->
-                <div class="col-lg-10 mx-auto">
+                <div class="col-xl-10 mx-auto">
                     <div class="row justify-content-center">
                         <?php // The Loop
                         while ($cases->have_posts()) {
                             $cases->the_post(); ?>
-                            <div class="col-12 col-lg-4 case">
+                            <div class="col-12 col-sm-8 col-md-6 col-lg-4 case">
                                 <div class="case__img">
                                     <img src="<?php echo the_post_thumbnail_url('large'); ?>" alt="">
                                 </div>

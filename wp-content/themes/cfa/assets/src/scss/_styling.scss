@@ -86,9 +86,10 @@ a {
   text-transform: uppercase;
   color: $dark;
   -webkit-text-stroke: 1px #fff;
-  @include media-breakpoint-up(lg){
-    animation: 13s ease spacing infinite;
-  }
+  letter-spacing: var(--title-spacing);
+  // @include media-breakpoint-up(lg){
+    // animation: 13s ease spacing infinite;
+  // }
 }
 
 .subtitle {
@@ -122,8 +123,11 @@ a {
   &-tertiary {
     color: #fff;
     background-color: $tertiary;
+    border: 2px solid transparent;
     &:hover {
       color: #fff;
+      background-color: transparent;
+      border-color: $tertiary;
     }
   }
   &-white {
@@ -159,15 +163,6 @@ a {
   }
 }
 
-@keyframes spacing {
-  0%,
-  100% {
-    letter-spacing: var(--title-spacing);
-  }
-  50% {
-    letter-spacing: 1rem;
-  }
-}
 
 .container-wide {
   @include make-container(5rem);
@@ -203,3 +198,4 @@ a {
     }
   }
 }
+
