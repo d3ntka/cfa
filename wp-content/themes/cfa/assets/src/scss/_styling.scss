@@ -106,6 +106,10 @@ a {
   border-radius: $border-radius-b;
   padding: 1.3rem 3rem;
   text-transform: uppercase;
+  &:hover,&:focus,&:active{
+    box-shadow: none;
+    outline: none;
+  }
   &-primary {
     color: #fff;
     background-color: $primary;
@@ -141,11 +145,36 @@ a {
   &-gradient {
     color: #fff;
     background: $gradient;
+    background-position: 50% 50%;
+    background-size: 200% 100%;
+    animation: btn-grad-b 1s ease;
+
     &:hover {
       color: #fff;
+      animation: btn-grad 1s ease;
+      
+      // background-size: 200% 100%;
+      // background-position: 200% 50%;
     }
   }
 }
+
+@keyframes btn-grad {
+  0%{
+    background-position: 50% 50%;
+  } 100%{
+    background-position: -200% 50%;
+  }
+}
+@keyframes btn-grad-b {
+  0%{
+    background-position: -200% 50%;
+  } 100%{
+    background-position: 50% 50%;
+  }
+}
+
+
 .btn-outline-secondary {
   border-width: 2px;
   color: $secondary;
