@@ -76,6 +76,29 @@ $cases = new WP_Query($args);
     <!-- /HERO -->
 
 
+    <!--  ABOUT  -->
+
+    <section class="about">
+<div class="container">
+    <div class="row">
+        <div class="col-10">
+            <div class="row">
+                <div class="col-6">
+                    <img src="about__img1" alt="">
+                    <img src="about__img2" alt="">
+                </div>
+                <div class="col-6">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </section>
+
+
+    <!-- / ABOUT  -->
     <!--CASE STUDY -->
     <?php
 
