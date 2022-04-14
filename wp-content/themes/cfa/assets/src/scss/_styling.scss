@@ -215,15 +215,25 @@ a {
     background-size: cover;
     // background-position: -300%;
   }
-  &--1{
+  &--about{
     &::before{
-      right: -250rem;
+      right: -230rem;
+    }
+  }
+  &--cs{
+    &::before{
+      right: -140rem;
+    }
+  }
+  &--influ{
+    &::before{
+      right: -280rem;
     }
   }
 
   &--footer{
     &::before{
-      right: -200rem;
+      right: -30rem;
     }
   }
 }

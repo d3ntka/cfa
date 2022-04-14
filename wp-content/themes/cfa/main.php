@@ -10,10 +10,7 @@ get_header();
 
 // The Query
 // WP_Query arguments
-$args = array(
-    'order' => 'DESC',
-);
-$cases = new WP_Query($args);
+
 ?>
 
 
@@ -79,22 +76,60 @@ $cases = new WP_Query($args);
     <!--  ABOUT  -->
 
     <section class="about">
-<div class="container">
-    <div class="row">
-        <div class="col-10">
-            <div class="row">
-                <div class="col-6">
-                    <img src="about__img1" alt="">
-                    <img src="about__img2" alt="">
-                </div>
-                <div class="col-6">
-
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <div class="row">
+                        <div class="col-12 col-lg-5 order-lg-2">
+                            <div class="about__desc">
+                                <div class="about__title title title-line title-line--about">
+                                    <?php if ($about_title = get_field('about_title')) : ?>
+                                        <h2>
+                                            <?php echo ($about_title); ?>
+                                        </h2>
+                                    <?php endif; ?>
+                                </div>
+                                <div class="about__txt">
+                                    <?php if ($about_txt = get_field('about_txt')) : ?>
+                                        <p>
+                                            <?php echo $about_txt; ?>
+                                        </p>
+                                    <?php endif; ?>
+                                </div>
+                                <div class="about__quote">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="104.389" height="67.903" viewBox="0 0 104.389 67.903">
+                                        <path id="Path_5915" data-name="Path 5915" d="M6.732-264.924l15.456,67.9H38.15l15.456-67.9Zm57.515,0,15.456,67.9H95.665l15.456-67.9Z" transform="translate(-6.732 264.924)" fill="#3c3c3b" />
+                                    </svg>
+                                    <?php if ($about_quote = get_field('about_quote')) : ?>
+                                        <div>
+                                            <?php echo esc_html($about_quote); ?>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-7 order-lg-1">
+                            <div class="about__img">
+                                <?php
+                                $about_img1 = get_field('about_img1');
+                                if ($about_img1) : ?>
+                                    <div class="about__img1">
+                                        <img class="img-fluid" src="<?php echo esc_url($about_img1['url']); ?>" alt="<?php echo esc_attr($about_img1['alt']); ?>" />
+                                    </div>
+                                <?php endif; ?>
+                                <?php
+                                $about_img2 = get_field('about_img2');
+                                if ($about_img2) : ?>
+                                    <div class="about__img2">
+                                        <img class="img-fluid" src="<?php echo esc_url($about_img2['url']); ?>" alt="<?php echo esc_attr($about_img2['alt']); ?>" />
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
     </section>
 
 
@@ -102,15 +137,14 @@ $cases = new WP_Query($args);
     <!--CASE STUDY -->
     <?php
 
+    $cases = get_field('cases');
 
-    if ($cases->have_posts()) {
-
-    ?>
+    if ($cases) : ?>
         <section class="casestudy" id="casestudy">
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <div class="title title-line title-line--1">
+                        <div class="title title-line title-line--cs">
                             <h2>
                                 <?php if ($case_title = get_field('case_title')) : ?>
                                     <?php echo esc_html($case_title); ?>
@@ -123,8 +157,8 @@ $cases = new WP_Query($args);
                 <div class="col-xl-10 mx-auto">
                     <div class="row justify-content-center">
                         <?php // The Loop
-                        while ($cases->have_posts()) {
-                            $cases->the_post(); ?>
+                        foreach ($cases as $post) : ?>
+                            <?php setup_postdata($post); ?>
                             <div class="col-12 col-sm-8 col-md-6 col-lg-4 case">
                                 <div class="case__img">
                                     <img src="<?php echo the_post_thumbnail_url('large'); ?>" alt="">
@@ -147,9 +181,7 @@ $cases = new WP_Query($args);
                                 </div>
 
                             </div>
-                        <?php
-                        }
-                        ?>
+                        <?php endforeach; ?>
                     </div>
                 </div>
 
@@ -158,11 +190,8 @@ $cases = new WP_Query($args);
 
         </section>
     <?php
-    } else {
-        // no posts found
-    }
-    wp_reset_postdata();
-
+        wp_reset_postdata();
+    endif;
     ?>
 
     <!-- / CASE STUDY -->
@@ -174,7 +203,7 @@ $cases = new WP_Query($args);
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <div class="title title-line title-line--1">
+                    <div class="title title-line title-line--influ">
                         <h2>
                             <?php if ($influ_title = get_field('influ_title')) : ?>
                                 <?php echo esc_html($influ_title); ?>
@@ -185,10 +214,10 @@ $cases = new WP_Query($args);
             </div>
 
             <?php
-            $posts = get_field('influ');
-            if ($posts) : ?>
+            $influ_posts = get_field('influ');
+            if ($influ_posts) : ?>
                 <div class="creators__row">
-                    <?php foreach ($posts as $post) : ?>
+                    <?php foreach ($influ_posts as $post) : ?>
                         <?php setup_postdata($post); ?>
                         <?php include(locate_template("components/influ/influ-vars.php")); ?>
                         <div class="creator">

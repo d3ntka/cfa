@@ -18,6 +18,9 @@
     background-color: transparent;
     transition: $transition;
     padding: 5rem 0;
+    &-brand{
+        display: inline-flex;
+    }
     .menu-item{
         @include media-breakpoint-up(lg){
             padding-left: 2rem;
