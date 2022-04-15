@@ -366,4 +366,50 @@
       }
     }
   }
+
+.projects{
+  position: relative;
+  .slider-nav{
+    position: absolute;
+    height: 8rem;
+    width: 102rem;
+    background: $gradient;
+    bottom: 10rem;
+    right: 0;
+    // z-index: 15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .swiper-button-prev{
+      position: relative;
+    }
+    .swiper-button-next{
+
+      position: relative;
+    }
+    .swiper-pagination{
+      position: relative;
+      &-bullet{
+        border: 2px solid #fff;
+        background-color: transparent;
+        opacity: 1;
+        &-active{
+          background-color: #fff;
+          opacity: 1;
+        }
+      }
+    }
+
+  }
+  .name{
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  .txt{
+
+  }
+
+}
+
+
 }

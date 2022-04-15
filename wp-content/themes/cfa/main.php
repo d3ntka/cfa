@@ -330,7 +330,90 @@ get_header();
 
     <!-- / INFLUENCERS -->
 
+    <!-- NASZE PROJEKTY -->
+    <section class="projects">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="title title-line title-line--projects">
+                        <h2>
+                            <?php if ($projects_title = get_field('projects_title')) : ?>
+                                <?php echo esc_html($projects_title); ?>
+                            <?php endif; ?>
+                        </h2>
+                    </div>
+                </div>
+            </div>
 
+            <?php if (have_rows('projects')) : ?>
+
+
+
+
+
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <?php while (have_rows('projects')) :
+                            the_row(); ?>
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+
+                            <div class="row">
+                                <div class="col-7">
+                                    <?php
+                                    $project_img = get_sub_field('project_img');
+                                    if ($project_img) : ?>
+                                        <img class="img-fluid" src="<?php echo esc_url($project_img['url']); ?>" alt="<?php echo esc_attr($project_img['alt']); ?>" />
+                                    <?php endif; ?>
+                                </div>
+                                <div class="col-5">
+                                <?php if ($project_title = get_sub_field('project_title')) : ?>
+                                    <div class="name">
+                                        <?php echo esc_html($project_title); ?>
+                                    </div>
+                                <?php endif; ?>
+
+                                <?php if ($project_txt = get_sub_field('project_txt')) : ?>
+                                    <div class="txt">
+                                        <?php echo $project_txt; ?>
+                                    </div>
+                                <?php endif; ?>
+                                </div>
+                            </div>
+
+
+
+
+                               
+
+
+                            </div>
+                        <?php endwhile; ?>
+
+                    </div>
+                    <div class="slider-nav">
+                        <!-- If we need pagination -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            <?php endif; ?>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- / NASZE PROJEKTY -->
 
 
 
