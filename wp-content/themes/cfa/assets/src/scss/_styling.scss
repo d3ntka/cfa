@@ -231,7 +231,12 @@ a {
       right: -180rem;
     }
   }
-
+  &--projects{
+    &::before{
+      right: -90rem;
+    }
+  }
+  
   &--footer{
     &::before{
       right: -30rem;

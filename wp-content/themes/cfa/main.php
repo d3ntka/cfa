@@ -346,11 +346,6 @@ get_header();
             </div>
 
             <?php if (have_rows('projects')) : ?>
-
-
-
-
-
                 <!-- Slider main container -->
                 <div class="swiper">
                     <!-- Additional required wrapper -->
@@ -359,34 +354,33 @@ get_header();
                             the_row(); ?>
                             <!-- Slides -->
                             <div class="swiper-slide">
-
-                            <div class="row">
-                                <div class="col-7">
-                                    <?php
-                                    $project_img = get_sub_field('project_img');
-                                    if ($project_img) : ?>
-                                        <img class="img-fluid" src="<?php echo esc_url($project_img['url']); ?>" alt="<?php echo esc_attr($project_img['alt']); ?>" />
-                                    <?php endif; ?>
-                                </div>
-                                <div class="col-5">
-                                <?php if ($project_title = get_sub_field('project_title')) : ?>
-                                    <div class="name">
-                                        <?php echo esc_html($project_title); ?>
+                                <div class="row">
+                                    <div class="col-md-7 projects__img">
+                                        <?php
+                                        $project_img = get_sub_field('project_img');
+                                        if ($project_img) : ?>
+                                            <img class="img-fluid" src="<?php echo esc_url($project_img['url']); ?>" alt="<?php echo esc_attr($project_img['alt']); ?>" />
+                                        <?php endif; ?>
                                     </div>
-                                <?php endif; ?>
+                                    <div class="col-md-5 desc">
+                                        <?php if ($project_title = get_sub_field('project_title')) : ?>
+                                            <div class="name">
+                                                <?php echo esc_html($project_title); ?>
+                                            </div>
+                                        <?php endif; ?>
 
-                                <?php if ($project_txt = get_sub_field('project_txt')) : ?>
-                                    <div class="txt">
-                                        <?php echo $project_txt; ?>
+                                        <?php if ($project_txt = get_sub_field('project_txt')) : ?>
+                                            <div class="txt">
+                                                <?php echo $project_txt; ?>
+                                            </div>
+                                        <?php endif; ?>
                                     </div>
-                                <?php endif; ?>
                                 </div>
-                            </div>
 
 
 
 
-                               
+
 
 
                             </div>
@@ -395,10 +389,30 @@ get_header();
                     </div>
                     <div class="slider-nav">
                         <!-- If we need pagination -->
-                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24.914" height="11.799" viewBox="0 0 24.914 11.799">
+                                <g id="Group_323" data-name="Group 323" transform="translate(25.114 11.721) rotate(180)">
+                                    <g id="Group_321" data-name="Group 321">
+                                        <line id="Line_9" data-name="Line 9" x2="23.314" transform="translate(1 5.822)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" />
+                                        <path id="Path_5708" data-name="Path 5708" d="M14.995,1l9.319,4.821-9.319,4.822" transform="translate(0 0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" />
+                                    </g>
+                                </g>
+                            </svg>
+
+                        </div>
                         <div class="swiper-pagination"></div>
                         <!-- If we need navigation buttons -->
-                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24.914" height="11.799" viewBox="0 0 24.914 11.799">
+                                <g id="Group_324" data-name="Group 324" transform="translate(0.8 1.078)">
+                                    <g id="Group_321" data-name="Group 321" transform="translate(0 0)">
+                                        <line id="Line_9" data-name="Line 9" x2="23.314" transform="translate(0 4.822)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" />
+                                        <path id="Path_5708" data-name="Path 5708" d="M0,9.643,9.319,4.822,0,0" transform="translate(13.995 0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" />
+                                    </g>
+                                </g>
+                            </svg>
+
+                        </div>
                     </div>
                 </div>
             <?php endif; ?>

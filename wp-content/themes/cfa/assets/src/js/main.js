@@ -1,6 +1,6 @@
 // Webpack Imports
 import * as bootstrap from 'bootstrap';
-import Swiper, { Navigation, Pagination }  from 'swiper';
+import Swiper, { EffectFade, Navigation, Pagination }  from 'swiper';
 
 
 ( function () {
@@ -37,14 +37,19 @@ import Swiper, { Navigation, Pagination }  from 'swiper';
 
 // (function {
 
-	Swiper.use([Navigation, Pagination]);
+	// Swiper.use([Navigation, Pagination]);
 
 
 	const swiper = new Swiper('.swiper', {
+		modules: [Navigation, Pagination, EffectFade],
 		// Optional parameters
 		// direction: 'vertical',
 		loop: true,
-	  
+		effect: "fade",
+		speed: 1000,
+	    fadeEffect: {
+			crossFade: true
+		  },
 		// If we need pagination
 		pagination: {
 		  el: '.swiper-pagination',
