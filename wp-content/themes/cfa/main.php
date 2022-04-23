@@ -75,7 +75,7 @@ get_header();
 
     <!--  ABOUT  -->
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-10">
@@ -199,7 +199,7 @@ get_header();
     <!-- INFLUENCERS -->
 
 
-    <section class="creators">
+    <section class="creators" id="creators">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -331,7 +331,7 @@ get_header();
     <!-- / INFLUENCERS -->
 
     <!-- NASZE PROJEKTY -->
-    <section class="projects">
+    <section class="projects" id="projects">
         <div class="container">
             <div class="row">
                 <div class="col">
