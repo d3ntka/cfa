@@ -68,7 +68,7 @@ $posts = get_field('influ');
                                         <?= $twitch_count; ?>
                                     </div>
                                     <div class="count__name">
-                                        <?php _e("oglądających", "cfa-t"); ?>
+                                        <?php _e("obserwujących", "cfa-t"); ?>
                                     </div>
                                 </div>
                             </a>
@@ -103,7 +103,7 @@ $posts = get_field('influ');
                                         <?= $instagram_count; ?>
                                     </div>
                                     <div class="count__name">
-                                        <?php _e("fapaczy", "cfa-t"); ?>
+                                        <?php _e("obserwujących", "cfa-t"); ?>
                                     </div>
                                 </div>
                             </a>
@@ -136,7 +136,7 @@ $posts = get_field('influ');
                                         <?= $tiktok_count; ?>
                                     </div>
                                     <div class="count__name">
-                                        <?php _e("cringo", "cfa-t"); ?>
+                                        <?php _e("obserwujących", "cfa-t"); ?>
                                     </div>
                                 </div>
                             </a>
@@ -154,7 +154,7 @@ $posts = get_field('influ');
                                         <?= $youtube_count; ?>
                                     </div>
                                     <div class="count__name">
-                                        <?php _e("Paczajsów", "cfa-t"); ?>
+                                        <?php _e("subskrybentów", "cfa-t"); ?>
                                     </div>
                                 </div>
                             </a>

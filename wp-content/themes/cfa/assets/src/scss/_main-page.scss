@@ -84,11 +84,11 @@
       }
       &2 {
         img{
-          border-radius: $border-radius;
+          // border-radius: $border-radius;
+          border: 15px solid $dark;
+          border-radius: $border-radius-b;
         }
         grid-area: 2 / 1 / 4 / 3;
-        border: 15px solid $dark;
-        border-radius: $border-radius-b;
       }
     }
     &__desc{
