@@ -78,7 +78,7 @@ get_header();
     <section class="about" id="about">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-10">
+                <div class="col-12 col-xl-10">
                     <div class="row">
                         <div class="col-12 col-lg-5 order-lg-2">
                             <div class="about__desc">
@@ -376,16 +376,8 @@ get_header();
                                         <?php endif; ?>
                                     </div>
                                 </div>
-
-
-
-
-
-
-
                             </div>
                         <?php endwhile; ?>
-
                     </div>
                     <div class="slider-nav">
                         <!-- If we need pagination -->
