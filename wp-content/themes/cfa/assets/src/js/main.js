@@ -47,6 +47,9 @@ import Swiper, { EffectFade, Navigation, Pagination }  from 'swiper';
 		loop: true,
 		effect: "fade",
 		speed: 1000,
+		autoplay: {
+			delay: 2000,
+		  },
 	    fadeEffect: {
 			crossFade: true
 		  },

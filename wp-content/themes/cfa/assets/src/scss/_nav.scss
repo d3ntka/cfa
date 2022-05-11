@@ -26,6 +26,12 @@
             padding-left: 2rem;
             padding-right: 2rem;
         }
+        @include media-breakpoint-down(lg){
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            // padding-right: 2rem;
+        }
+
         &:hover{
             .nav-link{
                 color: $primary;
@@ -33,17 +39,27 @@
         }
     }
     .navbar-nav .nav-link{
-        font-size: 1.3rem;
+        // font-size: 1.3rem;
         font-weight: 500;
         color: #fff;
         text-transform: uppercase;
+        white-space: nowrap;
     }
     .current-lang{
         .nav-link{
             text-decoration: underline;
         }
     }
-
+    .navbar-toggler{
+        border: 2px solid #fff;
+        outline: none;
+        box-shadow: none;
+    }
+    .navbar-toggler-icon{
+        width: 25px;
+        height: 25px;
+        color: #fff;
+    }
 
 }
 .navbar.nav-opened{
@@ -68,7 +84,7 @@
 }
 
 .footer{
-    padding-top: 20rem;
+    padding-top: 10rem;
     .title{
         margin-bottom: 14.5rem;
     }
@@ -79,16 +95,17 @@
             margin-bottom: 3.5rem;
         }
         p{
-            font-size: 1.3rem;
+            // font-size: 1.3rem;
         }
     }
     &-card{
         border-radius: $border-radius-b;
         border: 3px solid $secondary;
-        display: grid;
         max-width: 53rem;
         grid-template-columns: 25rem auto;
-
+        @include media-breakpoint-up(sm){
+            display: grid;
+        }
 
         img{
             max-width: 25rem;
@@ -117,11 +134,17 @@
             font-size: 1.6rem;
             font-weight: 500;
             padding: 1.5rem 4rem 1.5rem 3rem;
-            transform: translateX(-2rem);
+            @include media-breakpoint-up(sm){
+                transform: translateX(-2rem);
+            }
+            @include media-breakpoint-down(sm){
+                width: 100%;
+            }
             svg{
                 margin-right: 1.3rem;
-                max-width: 2.6rem;
-                min-height: 1.65rem;
+                width: 2.5407rem;
+                height: 1.6279rem;
+                // min-height: 1.65rem;
             }
         }
     }
