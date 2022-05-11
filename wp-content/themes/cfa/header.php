@@ -26,7 +26,7 @@
 			<div class="container navbar-container">
 			<!-- <div class=""> -->
 				<div class="">
-					<a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+					<a class="navbar-brand" href="<?php echo esc_url( site_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/build/img/logo-cfa.svg" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
 					</a>
 				</div>

@@ -317,7 +317,7 @@ get_header();
 
                 <?php if ($influ_btn = get_field('influ_btn')) : ?>
                     <div class="s-btn">
-                        <a href="" class="btn btn-tertiary">
+                        <a href="/influencerzy" class="btn btn-tertiary">
                             <?php echo esc_html($influ_btn); ?>
                         </a>
                     </div>
