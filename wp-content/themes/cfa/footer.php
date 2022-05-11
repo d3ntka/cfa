@@ -9,7 +9,7 @@
 			endif;
 			?>
 			</main><!-- /#main -->
-			<footer class="footer" id="footer">
+			<footer class="footer" id="contact">
 				<div class="container">
 					<div class="row">
 						<div class="col">
