@@ -219,8 +219,12 @@
       font-size: 3rem;
       font-weight: 600;
       padding-bottom: 2rem;
+      position: relative;
+      z-index: 15;
     }
     .s-btn {
+      position: relative;
+      z-index: 15;
     }
 
     &__row {
