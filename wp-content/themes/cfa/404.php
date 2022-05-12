@@ -7,20 +7,20 @@
 
 get_header();
 
-$search_enabled = get_theme_mod( 'search_enabled', '1' ); // Get custom meta-value.
+
 ?>
-<div id="post-0" class="content error404 not-found">
-	<h1 class="entry-title"><?php esc_html_e( 'Not found', 'cfa' ); ?></h1>
-	<div class="entry-content">
-		<p><?php esc_html_e( 'It looks like nothing was found at this location.', 'cfa' ); ?></p>
-		<div>
-			<?php
-				if ( '1' === $search_enabled ) :
-					get_search_form();
-				endif;
-			?>
+<div class="container tpl-404">
+	<div class="row justify-content-center">
+		<div class="col-auto">
+			<div id="post-0" class="content error404 not-found">
+				<h1 class="entry-title"><?php esc_html_e( '404', 'cfa' ); ?></h1>
+				<div class="entry-content">
+					<h3 class="pb-5"><?php esc_html_e( 'Szukaj a znajdziesz.', 'cfa' ); ?></h3>
+					<a href="<?php echo site_url(); ?>"><?php esc_html_e( 'Spróbuj tutaj', 'cfa' ); ?></a>
+				</div><!-- /.entry-content -->
+			</div><!-- /#post-0 -->
 		</div>
-	</div><!-- /.entry-content -->
-</div><!-- /#post-0 -->
+	</div>
+</div>
 <?php
 get_footer();

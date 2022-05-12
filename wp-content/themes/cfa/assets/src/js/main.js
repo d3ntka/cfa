@@ -1,6 +1,6 @@
 // Webpack Imports
 import * as bootstrap from 'bootstrap';
-import Swiper, { EffectFade, Navigation, Pagination }  from 'swiper';
+import Swiper, { Autoplay, EffectFade, Navigation, Pagination }  from 'swiper';
 
 
 ( function () {
@@ -41,14 +41,14 @@ import Swiper, { EffectFade, Navigation, Pagination }  from 'swiper';
 
 
 	const swiper = new Swiper('.swiper', {
-		modules: [Navigation, Pagination, EffectFade],
+		modules: [Navigation, Pagination, EffectFade, Autoplay],
 		// Optional parameters
 		// direction: 'vertical',
 		loop: true,
 		effect: "fade",
 		speed: 1000,
 		autoplay: {
-			delay: 2000,
+			delay: 5000,
 		  },
 	    fadeEffect: {
 			crossFade: true
@@ -56,6 +56,7 @@ import Swiper, { EffectFade, Navigation, Pagination }  from 'swiper';
 		// If we need pagination
 		pagination: {
 		  el: '.swiper-pagination',
+		  clickable: true,
 		},
 	  
 		// Navigation arrows

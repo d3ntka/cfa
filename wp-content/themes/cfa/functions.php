@@ -506,8 +506,8 @@ add_action( 'wp_enqueue_scripts', 'cfa_scripts_loader' );
 
 
 // ADD CONTENT CREATORS TYPE POST
-add_action( 'init', 'cfa_register_post_type' );
-function cfa_register_post_type() {
+add_action( 'init', 'cfa_register_post_type_creators' );
+function cfa_register_post_type_creators() {
 	$args = [
 		'label'  => esc_html__( 'Creators', 'text-domain' ),
 		'labels' => [
@@ -553,4 +553,60 @@ function cfa_register_post_type() {
 	];
 
 	register_post_type( 'creator', $args );
+}
+
+
+
+// ADD CASE STUDY TYPE POST
+add_action( 'init', 'cfa_register_post_type_casestudy' );
+function cfa_register_post_type_casestudy() {
+	$args = [
+		'label'  => esc_html__( 'Case Study', 'text-domain' ),
+		'labels' => [
+			'menu_name'          => esc_html__( 'Case Study', 'cfa' ),
+			'name_admin_bar'     => esc_html__( 'Case Study', 'cfa' ),
+			'add_new'            => esc_html__( 'Add Case Study', 'cfa' ),
+			'add_new_item'       => esc_html__( 'Add new Case Study', 'cfa' ),
+			'new_item'           => esc_html__( 'New Case Study', 'cfa' ),
+			'edit_item'          => esc_html__( 'Edit Case Study', 'cfa' ),
+			'view_item'          => esc_html__( 'View Case Study', 'cfa' ),
+			'update_item'        => esc_html__( 'View Case Study', 'cfa' ),
+			'all_items'          => esc_html__( 'All Case Study', 'cfa' ),
+			'search_items'       => esc_html__( 'Search Case Study', 'cfa' ),
+			'parent_item_colon'  => esc_html__( 'Parent Case Study', 'cfa' ),
+			'not_found'          => esc_html__( 'No Case Study found', 'cfa' ),
+			'not_found_in_trash' => esc_html__( 'No Case Study found in Trash', 'cfa' ),
+			'name'               => esc_html__( 'Case Study', 'cfa' ),
+			'singular_name'      => esc_html__( 'Case Study', 'cfa' ),
+		],
+		'public'              => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'show_ui'             => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'show_in_rest'        => true,
+		'capability_type'     => 'post',
+		'hierarchical'        => false,
+		'has_archive'         => true,
+		'query_var'           => true,
+		'can_export'          => true,
+		'rewrite_no_front'    => false,
+		'show_in_menu'        => true,
+		'menu_position'       => 20,
+		'menu_icon'           => 'align-right',
+		'supports' => [
+			'title',
+			'thumbnail',
+			'custom-fields',
+			'editor',
+			'excerpt',
+		],
+		'taxonomies' => [
+			'tag',
+		],
+		'rewrite' => true
+	];
+
+	register_post_type( 'casestudy', $args );
 }
