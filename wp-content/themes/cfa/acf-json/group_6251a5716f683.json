@@ -309,13 +309,15 @@
                 "id": ""
             },
             "post_type": [
-                "post"
+                "casestudy"
             ],
             "taxonomy": "",
             "filters": [
                 "search"
             ],
-            "elements": "",
+            "elements": [
+                "featured_image"
+            ],
             "min": 3,
             "max": 3,
             "return_format": "object"
@@ -574,5 +576,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1650044360
+    "modified": 1654524333
 }

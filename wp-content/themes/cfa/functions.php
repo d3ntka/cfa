@@ -560,8 +560,14 @@ function cfa_register_post_type_creators() {
 // ADD CASE STUDY TYPE POST
 add_action( 'init', 'cfa_register_post_type_casestudy' );
 function cfa_register_post_type_casestudy() {
+	$rewrite = array(
+		'slug' => 'casestudy',
+		'with_front' => true,
+		'pages' => true,
+		'feeds' => true,
+	);
 	$args = [
-		'label'  => esc_html__( 'Case Study', 'text-domain' ),
+		'label'  => esc_html__( 'Case Study', 'cfa' ),
 		'labels' => [
 			'menu_name'          => esc_html__( 'Case Study', 'cfa' ),
 			'name_admin_bar'     => esc_html__( 'Case Study', 'cfa' ),
@@ -594,7 +600,7 @@ function cfa_register_post_type_casestudy() {
 		'rewrite_no_front'    => false,
 		'show_in_menu'        => true,
 		'menu_position'       => 20,
-		'menu_icon'           => 'align-right',
+		'menu_icon'           => 'dashicons-analytics',
 		'supports' => [
 			'title',
 			'thumbnail',
@@ -602,10 +608,8 @@ function cfa_register_post_type_casestudy() {
 			'editor',
 			'excerpt',
 		],
-		'taxonomies' => [
-			'tag',
-		],
-		'rewrite' => true
+		'taxonomies' => array('post_tag'),
+		'rewrite' => $rewrite,
 	];
 
 	register_post_type( 'casestudy', $args );
