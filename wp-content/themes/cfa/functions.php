@@ -60,6 +60,8 @@ if ( ! function_exists( 'cfa_setup_theme' ) ) :
 			)
 		);
 
+		add_image_size('text_image', 552, '', true); // Text-image Thumbnail
+
 		// Add support for Block Styles.
 		add_theme_support( 'wp-block-styles' );
 		// Add support for full and wide alignment.
@@ -614,3 +616,59 @@ function cfa_register_post_type_casestudy() {
 
 	register_post_type( 'casestudy', $args );
 }
+
+
+
+function my_plugin_block_categories( $categories, $post ) {
+    if ( $post->post_type !== 'page' ) {
+        return $categories;
+    }
+    return array_merge(
+        array(
+            array(
+                'slug' => 'cfa',
+                'title' => __( 'CFA', 'cfa' ),
+                'icon'  => 'admin-appearance',
+            ),
+        ),
+        $categories
+    );
+}
+add_filter( 'block_categories', 'my_plugin_block_categories', 10, 2 );
+
+
+// ACF Gutenberg
+
+add_action('acf/init', 'my_acf_init');
+function my_acf_init() {
+
+	if( function_exists('acf_register_block_type') ) {
+
+		// Gutenberg - text + image
+		acf_register_block_type(array(
+			'name'				=> 'text-image',
+			'title'				=> __('Tekst + obrazek'),
+			'description'		=> __('Blok tekstu z obrazkiem.'),
+			'render_template'	=> 'blocks/text-image/text-image.php',
+			'category'			=> 'cfa',
+			'icon'				=> 'media-document',
+			'keywords'			=> array( 'cfa' ),
+			'align' 			=> 'wide',
+			'supports' => array(
+				'align' 			=> false,
+				'align_text'		=> false,
+				'align_content' => false,
+				'anchor' => true
+			),
+			'enqueue_assets' => function(){
+				wp_enqueue_style( 'cfa-text-image', get_template_directory_uri() . '/assets/build/css/blocks/text-image/text-image.css');
+				},
+		));
+
+	}
+}
+
+
+add_action( 'enqueue_block_editor_assets', function() {
+    wp_enqueue_style( 'editor-style', get_stylesheet_directory_uri() . "/assets/build/css/main.css", false, '1.0', 'all' );
+} );

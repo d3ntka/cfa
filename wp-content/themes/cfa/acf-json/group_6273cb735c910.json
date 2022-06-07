@@ -1,0 +1,131 @@
+{
+    "key": "group_6273cb735c910",
+    "title": "Gutenberg - text - image",
+    "fields": [
+        {
+            "key": "field_6273cb830dfef",
+            "label": "Tekst",
+            "name": "gb_text_image_txt",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "visual",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_6273cbc50dff0",
+            "label": "Zdjęcie",
+            "name": "gb_text_image_img",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_6273cbeb22622",
+            "label": "Kolor tła",
+            "name": "gb_text_image_bg_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_6273cc08fdaf1",
+            "label": "Kolejność",
+            "name": "gb_text_image_order",
+            "type": "button_group",
+            "instructions": "Wybierz po której stronie ma być zdjęcie",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "0": "<i class=\"dashicons dashicons-format-image\"><\/i> | <i class=\"dashicons dashicons-format-aside\"><\/i>",
+                "2": "<i class=\"dashicons dashicons-format-aside\"><\/i> | <i class=\"dashicons dashicons-format-image\"><\/i>"
+            },
+            "allow_null": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_6278d8ad190e1",
+            "label": "Wyrównanie w pionie",
+            "name": "gb_text_image_align",
+            "type": "button_group",
+            "instructions": "Wybierz kolejność elementów.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "start": "Góra",
+                "center": "Środek",
+                "end": "Dół",
+                "stretch": "Rozciągnij"
+            },
+            "allow_null": 0,
+            "default_value": "start",
+            "layout": "horizontal",
+            "return_format": "value"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/text-image"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1652706547
+}

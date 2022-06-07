@@ -13,6 +13,10 @@ var paths = {
 	styles: {
 		src: './assets/src/scss/*.scss',
 		dest: './assets/build/css'
+	},	
+	blocks: {
+		src: './assets/src/scss/blocks/**/*.scss',
+		dest: './assets/build/css/blocks/'
 	},
 	scripts: {
 		src: './assets/src/js/*.js',
@@ -92,6 +96,42 @@ function build_css() {
 		);
 }
 
+
+function build_blocks() {
+	const sass = require( 'gulp-sass' )( require( 'sass' ) ),
+		postcss = require( 'gulp-postcss' ),
+		sourcemaps = require( 'gulp-sourcemaps' ),
+		autoprefixer = require( 'autoprefixer' ),
+		cssnano = require( 'cssnano' );
+
+	const plugins = [
+		autoprefixer(),
+		cssnano(),
+	];
+
+	return gulp.src( paths.blocks.src )
+		.pipe(
+			sourcemaps.init()
+		)
+		.pipe(
+			sass()
+				.on( 'error', sass.logError )
+		)
+		.pipe(
+			postcss( plugins )
+		)
+		.pipe(
+			sourcemaps.write( './' )
+		)
+		.pipe(
+			gulp.dest( paths.blocks.dest )
+		)
+		.pipe(
+			server.stream() // Browser Reload
+		);
+}
+
+
 /**
  * Watch task: Webpack + SASS
  * 
@@ -107,6 +147,7 @@ gulp.task( 'watch',
 
 		gulp.watch( paths.scripts.src, build_js );
 		gulp.watch( [ paths.styles.src, './assets/src/scss/*.scss' ], build_css );
+		gulp.watch( [ paths.blocks.src, './assets/scss/blocks/**/*.scss', './assets/scss/**/**/*.scss' ], build_blocks );
 	}
 );
 
