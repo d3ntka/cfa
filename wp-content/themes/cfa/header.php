@@ -47,7 +47,7 @@ $search_enabled  = get_theme_mod('search_enabled', '1'); // Get custom meta-valu
 							array(
 								'theme_location' => 'main-menu',
 								'container'      => '',
-								'menu_class'     => 'navbar-nav mx-auto',
+								'menu_class'     => 'navbar-nav mx-auto js-nav-top',
 								'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
 								'walker'         => new WP_Bootstrap_Navwalker(),
 							)
