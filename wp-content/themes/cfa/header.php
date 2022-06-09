@@ -72,7 +72,7 @@ $search_enabled  = get_theme_mod('search_enabled', '1'); // Get custom meta-valu
 								</svg>
 							</a> -->
 						</div>
-						<a class="btn btn-white mt-4 mt-lg-0" href="#contact">
+						<a class="btn btn-white mt-4 mt-lg-0 js-anchor" href="#contact">
 							<?php _e("Kontakt", "cfa-t"); ?>
 						</a>
 					</div>

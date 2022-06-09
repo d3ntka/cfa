@@ -37,13 +37,13 @@ get_header();
                         <?php echo esc_html($s1_text); ?>
                     <?php endif; ?>
                 </p>
-                <div class="d-flex justify-content-center">
-                    <a class="btn btn-gradient" href="#casestudy">
-                        <?php if ($s1_button = get_field('s1_button')) : ?>
+                <?php if ($s1_button = get_field('s1_button')) : ?>
+                    <div class="d-flex justify-content-center">
+                        <a class="btn btn-gradient js-anchor" href="#casestudy">
                             <?php echo esc_html($s1_button); ?>
-                        <?php endif; ?>
-                    </a>
-                </div>
+                        </a>
+                    </div>
+                <?php endif; ?>
             </div>
             <?php if (have_rows('s1_tags')) : ?>
                 <div class="hero__tags">
@@ -417,7 +417,7 @@ get_header();
 
 
 
-    
+
 
 
     <!-- / NASZE PROJEKTY -->
