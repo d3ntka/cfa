@@ -39,7 +39,7 @@
 		if ( is_search() ) : // Only display Excerpts for Search.
 	?>
 		<div class="entry-summary">
-			<?php the_excerpt(); ?>
+			<!-- <?php the_excerpt(); ?> -->
 		</div><!-- /.entry-summary -->
 	<?php
 		else :
@@ -113,3 +113,4 @@
 		<?php edit_post_link( __( 'Edit', 'cfa' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- /.entry-meta -->
 </article><!-- /#post-<?php the_ID(); ?> -->
+

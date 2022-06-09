@@ -265,14 +265,11 @@ if ( ! function_exists( 'cfa_article_posted_on' ) ) :
 	 */
 	function cfa_article_posted_on() {
 		printf(
-			wp_kses_post( __( '<span class="sep">Posted on </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author-meta vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'cfa' ) ),
+			wp_kses_post( __( '<div href="%1$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></div>', 'cfa' ) ),
 			esc_url( get_the_permalink() ),
-			esc_attr( get_the_date() . ' - ' . get_the_time() ),
+			esc_attr( get_the_date()),
 			esc_attr( get_the_date( 'c' ) ),
-			esc_html( get_the_date() . ' - ' . get_the_time() ),
-			esc_url( get_author_posts_url( (int) get_the_author_meta( 'ID' ) ) ),
-			sprintf( esc_attr__( 'View all posts by %s', 'cfa' ), get_the_author() ),
-			get_the_author()
+			esc_html( get_the_date()),
 		);
 	}
 endif;
@@ -563,7 +560,7 @@ function cfa_register_post_type_creators() {
 add_action( 'init', 'cfa_register_post_type_casestudy' );
 function cfa_register_post_type_casestudy() {
 	$rewrite = array(
-		'slug' => 'casestudy',
+		'slug' => 'case-study',
 		'with_front' => true,
 		'pages' => true,
 		'feeds' => true,
@@ -596,7 +593,7 @@ function cfa_register_post_type_casestudy() {
 		'show_in_rest'        => true,
 		'capability_type'     => 'post',
 		'hierarchical'        => false,
-		'has_archive'         => true,
+		'has_archive'         => false,
 		'query_var'           => true,
 		'can_export'          => true,
 		'rewrite_no_front'    => false,

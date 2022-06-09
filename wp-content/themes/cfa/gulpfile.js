@@ -3,7 +3,9 @@ const gulp = require( 'gulp' ),
 	browserSync = require( 'browser-sync' ),
 	server = browserSync.create(),
 	dev_url = 'cfa.test',
-	webp = require('gulp-webp');
+	webp = require('gulp-webp'),
+	changed = require('gulp-changed'),
+	imagemin = require('gulp-imagemin');
 
 /**
  * Define all source paths
@@ -20,11 +22,11 @@ var paths = {
 	},
 	scripts: {
 		src: './assets/src/js/*.js',
-		dest: './assets/build/js'
+		dest: './assets/build/js/'
 	},
 	images: {
-		src: './assets/src/img/*.png',
-		dest: './assets/build/img'
+		src: './assets/src/img/*.+(png|jpg|jpeg)',
+		dest: './assets/build/img/'
 	}
 };
 
@@ -151,6 +153,14 @@ gulp.task( 'watch',
 	}
 );
 
+
+gulp.task('imgmin', () =>
+	gulp.src(paths.images.src)
+		.pipe(changed(paths.images.dest))
+		.pipe(imagemin({verbose:true}))
+        // .pipe(webp({quality: 100}))
+		.pipe(gulp.dest(paths.images.dest))
+);
 
 gulp.task('webp', () =>
     gulp.src(paths.images.src)

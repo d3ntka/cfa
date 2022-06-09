@@ -18,10 +18,11 @@ if (!empty($block['align'])) {
 //     $layout .= $block['align'];
 // }
 
+$width_mod = "xl";
 
 $container = 'container';
-$colText = 'col-12 col-lg-6';
-$colImage = 'col-12 col-lg-6';
+$colText = 'col-12 col-' . $width_mod . '-6';
+$colImage = 'col-12 col-' . $width_mod . '-6';
 
 
 $textPlaceholder = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ut velit veniam culpa. Facere fugiat nam totam pariatur natus possimus labore rem! Optio quia est consequuntur, itaque natus debitis eius.';
@@ -33,7 +34,7 @@ $gb_text_image_bg_color = get_field('gb_text_image_bg_color');
 $gb_text_image_align = get_field( 'gb_text_image_align' )?: "0";
 $gb_text_image_order = get_field( 'gb_text_image_order' );
 
-$colOrder = 'order-lg-' . $gb_text_image_order;
+$colOrder = 'order-' . $width_mod . '-' . $gb_text_image_order;
 
 
 // include (locate_template('/template-parts/aos/aos.php', false, true));

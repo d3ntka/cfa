@@ -5,7 +5,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'col-sm-6' ); ?>>
-	<div class="card mb-4">
+	<div class="mb-4">
 		<header class="card-body">
 			<h2 class="card-title">
 				<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'cfa' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
@@ -13,7 +13,7 @@
 			<?php
 				if ( 'post' === get_post_type() ) :
 			?>
-				<div class="card-text entry-meta">
+				<div class="card-text entry-meta pt-3">
 					<?php
 						cfa_article_posted_on();
 
@@ -42,8 +42,8 @@
 				?>
 				<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . esc_html__( 'Pages:', 'cfa' ) . '</span>', 'after' => '</div>' ) ); ?>
 			</div><!-- /.card-text -->
-			<footer class="entry-meta">
-				<a href="<?php echo get_the_permalink(); ?>" class="btn btn-outline-secondary"><?php esc_html_e( 'more', 'cfa' ); ?></a>
+			<footer class="entry-meta d-flex justify-content-center">
+				<a href="<?php echo get_the_permalink(); ?>" class="btn btn-outline-secondary"><?php esc_html_e( 'Zobacz', 'cfa' ); ?></a>
 			</footer><!-- /.entry-meta -->
 		</div><!-- /.card-body -->
 	</div><!-- /.col -->

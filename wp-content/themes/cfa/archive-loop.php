@@ -5,6 +5,7 @@
 
 cfa_content_nav( 'nav-above' );
 
+
 if ( have_posts() ) :
 ?>
 	<div class="row">

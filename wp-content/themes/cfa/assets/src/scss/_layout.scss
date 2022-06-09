@@ -3,7 +3,7 @@
     justify-content: center;
     justify-items: center;
     align-content: center;
-    min-height: 48rem;
+    min-height: 50rem;
     position: relative;
     margin-bottom: 5rem;
     a,.title{
@@ -87,9 +87,6 @@
     }
 }
 
-
-
-
 .back-to-main{
     font-size: 1.3rem;
     color: $grey;
@@ -99,11 +96,15 @@
     }
 }
 
-
 .tpl-404{
     padding-top:30rem;
     padding-bottom: 10rem;
     a{
         font-size: 2rem;
     }
+}
+
+.post-navigation{
+    display: flex;
+    flex-wrap: wrap;
 }
