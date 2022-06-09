@@ -173,9 +173,11 @@ get_header();
                                     <?php
                                     $post_tags = get_the_tags();
                                     if (!empty($post_tags)) {
+                                        echo '<ul>';
                                         foreach ($post_tags as $post_tag) {
                                             echo '<li>' . $post_tag->name . '</li>';
                                         }
+                                        echo '</ul>';
                                     }
                                     ?>
                                 </div>
