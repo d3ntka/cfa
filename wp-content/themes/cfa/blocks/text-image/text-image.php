@@ -49,7 +49,7 @@ if ($gb_text_image_order == "2") {
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
 
     <div class="text-image__content">
-        <div class="<?php echo esc_attr($container); ?>">
+        <!-- <div class="<?php echo esc_attr($container); ?>"> -->
             <div class="row justify-content-center justify-content-lg-between align-items-<?=$gb_text_image_align?>">
                 <div class="text-image__img mb-4 mb-lg-0 <?=$colImage?> <?=$colOrder?>">
                     <img class="" src="<?php echo esc_url($gb_text_image_img['sizes']['text_image']); ?>" alt="<?php echo esc_attr($gb_text_image_img['alt']); ?>" />
@@ -58,7 +58,7 @@ if ($gb_text_image_order == "2") {
                     <?php echo $gb_text_image_txt?>
                 </div>
             </div>
-        </div>
+        <!-- </div> -->
     </div>
 
 
