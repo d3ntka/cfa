@@ -60,7 +60,7 @@ if ( ! function_exists( 'cfa_setup_theme' ) ) :
 			)
 		);
 
-		add_image_size('text_image', 552, '', true); // Text-image Thumbnail
+		add_image_size('text_image', 670); // Text-image Thumbnail
 
 		// Add support for Block Styles.
 		add_theme_support( 'wp-block-styles' );
