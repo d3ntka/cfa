@@ -92,7 +92,7 @@ $search_enabled  = get_theme_mod('search_enabled', '1'); // Get custom meta-valu
 
 				<div class="container">
 					<div class="row justify-content-center">
-						<div class="col-md-10 col-sm-12">
+						<div class="col-md-8 col-sm-12">
 						<?php
 					endif;
 						?>

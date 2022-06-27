@@ -53,6 +53,11 @@ h3 {
   line-height: 0.9;
 }
 
+h4{
+  @include rfs(3rem);
+  font-weight: 400;
+}
+
 a {
   transition: $transition;
 }
