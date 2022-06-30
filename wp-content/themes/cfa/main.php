@@ -138,9 +138,10 @@ get_header();
     <?php
 
     $cases = get_field('cases');
-
+?>
+    <section class="casestudy" id="casestudy">
+    <?php
     if ($cases) : ?>
-        <section class="casestudy" id="casestudy">
             <div class="container">
                 <div class="row">
                     <div class="col">
@@ -159,30 +160,7 @@ get_header();
                         <?php // The Loop
                         foreach ($cases as $post) : ?>
                             <?php setup_postdata($post); ?>
-                            <div class="col-12 col-sm-8 col-md-6 col-lg-4 case">
-                                <div class="case__img">
-                                    <img src="<?php echo the_post_thumbnail_url('large'); ?>" alt="">
-                                </div>
-                                <div class="case__title">
-                                    <?php echo get_the_title(); ?>
-                                </div>
-                                <div class="case__desc">
-                                    <?php echo get_the_excerpt(); ?>
-                                </div>
-                                <div class="case__tags">
-                                    <?php
-                                    $post_tags = get_the_tags();
-                                    if (!empty($post_tags)) {
-                                        echo '<ul>';
-                                        foreach ($post_tags as $post_tag) {
-                                            echo '<li>' . $post_tag->name . '</li>';
-                                        }
-                                        echo '</ul>';
-                                    }
-                                    ?>
-                                </div>
-
-                            </div>
+                            <?php echo get_template_part("components/casestudy/casestudy", "small") ?>
                         <?php endforeach; ?>
                     </div>
                 </div>
@@ -190,11 +168,18 @@ get_header();
                 <!-- </div> -->
             </div>
 
-        </section>
-    <?php
+            <?php
         wp_reset_postdata();
     endif;
     ?>
+    <?php if ($case_btn = get_field('case_btn')) : ?>
+        <div class="d-flex justify-content-center">
+            <a class="btn btn-gradient" href="/casestudy">
+                <?php echo esc_html($case_btn); ?>
+            </a>
+        </div>
+    <?php endif; ?>
+    </section>
 
     <!-- / CASE STUDY -->
 

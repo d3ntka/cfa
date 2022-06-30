@@ -2,12 +2,74 @@
 
 .casestudy {
   padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 10rem;
   .title {
     margin-bottom: 10rem;
   }
   .case {
     padding-bottom: 5rem;
+    &__wrap {
+      position: relative;
+      z-index: 30;
+      &::before {
+        content: "";
+        position: absolute;
+        background: $gradient;
+        border-radius: $border-radius-c;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: $transition, opacity 0.6s ease;
+        opacity: 0;
+        z-index: -2;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        background: $dark;
+        border-radius: $border-radius-b;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+    }
+    &:hover {
+      .case__img {
+        img {
+          transform: scale(1.1);
+        }
+      }
+      .case__wrap {
+        &::before {
+          width: calc(100% + 6px);
+          height: calc(100% + 6px);
+          opacity: 1;
+        }
+      }
+      .case__title,
+      .case__desc,
+      .case__tags {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+    }
+    &__title,
+    &__desc,
+    &__tags {
+      padding-right: 1rem;
+    }
+    &__img,
+    &__title,
+    &__desc,
+    &__tags {
+      position: relative;
+      transition: $transition;
+    }
+
     &__img {
       // max-width: 446px;
       // height: 48rem;
@@ -19,6 +81,7 @@
         height: 100%;
         object-fit: cover;
         object-position: center center;
+        transition: 0.5s ease-in-out;
       }
     }
     &__title {
@@ -37,7 +100,7 @@
       text-overflow: clip;
     }
     &__tags {
-      ul{
+      ul {
         padding: 1rem 0;
         display: flex;
         gap: 1rem;
@@ -65,17 +128,24 @@
   }
 }
 
-.single-casestudy{
-  .title h1{
+.single-casestudy {
+  .title h1 {
     @include rfs(5.2rem);
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(md) {
       @include rfs(4.2rem);
     }
   }
-  .page-header{
+  .page-header {
     margin-bottom: 1rem;
   }
 }
-article.casestudy{
+article.casestudy {
   padding-top: 0rem;
+  img {
+    border-radius: $border-radius;
+  }
+  .wp-block-image:not(.is-style-rounded) > a,
+  .wp-block-image:not(.is-style-rounded) img {
+    border-radius: $border-radius;
+  }
 }
